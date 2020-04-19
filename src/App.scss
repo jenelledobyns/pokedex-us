@@ -1,0 +1,224 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, input, button {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+}
+
+h1 {
+  font-size: 42pt;
+  font-weight: 200;
+  letter-spacing: 2pt;
+  text-align: center;
+  margin: 30px;
+  color: #656565;
+}
+
+input, button {
+  border: none;
+  border-radius: 20px;
+}
+
+button {
+  padding: 13px 45px;
+  border-radius: 30px;
+  color: #656565;
+  font-size: 12pt;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+
+.header {
+  width: 100%;
+  height: 350px;
+  background-image: linear-gradient(#D1544C, #D14242);
+  overflow: hidden;
+  position: relative;
+  
+  .pokelogo {
+    background-image: url('https://svgur.com/i/KD6.svg');
+    background-size: cover;
+    top: -50px;
+    width: 600px;
+    height: 600px;
+    z-index: 1;
+    position: absolute;
+  }
+  
+  .search {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    
+    h1 {
+      color: #FFF1CE;
+      margin: 20px;
+      font-size: 65pt;
+    }
+    
+    input[type="text"] {
+      width: 390px;
+      height: 38px;
+      border-radius: 30px;
+      margin: 30px;
+      padding: 5px 18px;
+      font-size: 14pt;
+      color: #818181;
+      border: none;
+      transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+      
+      &:focus {
+        transform: scale(1.02);
+      }
+
+    }
+    
+  }
+}
+
+.main {
+  background-color: #f2f2f2;
+  
+  .nav {
+    overflow: hidden;
+    padding: 0 200px;
+    height: 100px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    button {
+      background-color: #ebebeb;
+      
+      i {
+        padding-left: 10px;
+
+      }
+      
+    }
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-weight: 400;
+      font-size: 36pt;
+    }
+    
+    .pokemon {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 10px 10px;
+      
+      .cell {
+        width: 150px;
+        height: 220px;
+        margin: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+         position: relative;
+
+  
+  .sprite {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    text-align: center;
+    
+    img {
+    }
+  }
+  
+  .number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    h4 {
+      font-size: 12pt;
+      letter-spacing: 0pt;
+      color: #818181;
+    }
+  }
+  
+  .name {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    
+    h3 {
+      color: #656565;
+      font-weight: 200;
+    }
+  }
+}
+    }
+  }
+}
+
