@@ -6,12 +6,13 @@
     position: relative;
     
     .pokelogo {
+      position: absolute;
       background-image: url('https://svgur.com/i/KD6.svg');
       background-size: cover;
       top: -50px;
+      left: 50px;
       width: 600px;
       height: 600px;
       z-index: 1;
-      position: absolute;
     }
 }

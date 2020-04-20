@@ -5,7 +5,7 @@ import './styles/Pokemonlist.scss';
 
 export default class Pokemonlist extends Component {
     state= {
-      url: "https://pokeapi.co/api/v2/pokemon?limit=151",
+      url: "https://pokeapi.co/api/v2/pokemon?limit=950",
       pokemon: null
     };
   
@@ -29,7 +29,7 @@ export default class Pokemonlist extends Component {
                 </div>
                 ) : (
                 
-                    <h1>Loading pokémon...</h1>
+                    <h1>Loading...</h1>
                 )}
 
         </React.Fragment>

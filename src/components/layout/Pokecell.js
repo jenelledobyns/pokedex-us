@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import './styles/Pokecell.scss';
 
-const sprite = styled.img `
-width: 5em;
-height: 5em;
-display: none;
-`;
+
 
 export default class Pokecell extends Component {
+
+  addDefaultSrc(ev){
+    ev.target.src = 'https://svgur.com/i/KGM.svg';
+  }
 
   state = {
     name: '',
     img: '',
-    id: ''
+    id: '',
+    type1: '',
+    type2: '',
+    imageLoading: true,
+    imgLoadErr: false
   };
 
   componentDidMount () {
     const { name, url } = this.props;
-    const img = `https://raw.githubusercontent.com/tdmalone/pokecss-media/master/graphics/pokemon/ani-front/${name}.gif`
+    const img = `https://projectpokemon.org/images/normal-sprite/${name}.gif`
     const id = url.split('/')[url.split('/').length - 2];
 
     this.setState({ name, img, id });
@@ -27,14 +30,15 @@ export default class Pokecell extends Component {
     render() {
 
         return (
-        <div class="cell">
-            <div class="sprite">
-                <img src={this.state.img}></img>
+        <div className="cell">
+            <div className="sprite">
+                <img src={this.state.img}
+                onError={this.addDefaultSrc} />
             </div>
-            <div class="number">
+            <div className="number">
               <h4>#{this.state.id}</h4>
             </div>
-            <div class="name">
+            <div className="name">
               <h3>{this.state.name}</h3>
             </div>
           </div>
